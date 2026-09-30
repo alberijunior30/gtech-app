@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Link } from "react-router";
 import { buttonVariants } from "@/components/ui/button";
-import { Header } from "@/components/Layouts/Header";
+import { Header } from "@/components/layouts/Header";
 export function Home(){
 
     return (
