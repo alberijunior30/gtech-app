@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import Logo from "../../../assets/images.png"
+import Logo from "@/assets/images.png"
 import { Input } from "@/components/ui/input";
 import { Field, FieldLabel, FieldDescription } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
@@ -27,7 +27,7 @@ export function Login(){
           <Field>
             <FieldLabel htmlFor="email">Email</FieldLabel>
             <Input
-              className="border-white/20 focus-visible:border-green-500"
+              className="border-white/20 focus-visible:border-green-500 focus-visible:ring-0"
               id="email"
               name="email"
               type="email"
@@ -39,7 +39,7 @@ export function Login(){
           <Field>
             <FieldLabel htmlFor="senha">Senha</FieldLabel>
             <Input
-              className="border-white/20 focus-visible:border-green-500"
+              className="border-white/20 focus-visible:border-green-500 focus-visible:ring-0"
               id="senha"
               name="senha"
               type="password"
@@ -56,13 +56,16 @@ export function Login(){
               </label>
             </div>
 
-            <Link to="/recover" className="underline text-green-500 hover:text-red-500">
+            <Link
+              to="/recover"
+              className="underline text-green-500 hover:text-green-600"
+            >
               Esqueci minha senha
             </Link>
           </div>
 
           <Button
-            className="w-full bg-green-500 mt-6 hover:bg-red-500"
+            className="w-full bg-green-500 mt-6 hover:bg-green-600"
             type="submit"
           >
             Logar
@@ -71,7 +74,10 @@ export function Login(){
 
         <p className="text-center">
           Não tem uma conta ainda?{" "}
-          <Link to="/register" className="underline text-green-500 hover:text-red-500">
+          <Link
+            to="/register"
+            className="underline text-green-500 hover:text-green-600"
+          >
             Registrar-se
           </Link>
         </p>
