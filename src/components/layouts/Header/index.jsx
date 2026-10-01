@@ -2,10 +2,14 @@ import Logo from "@/assets/images.png";
 
 export function Header({actions}) {
   return (
-    <header className="grid grid-cols-3 items-center bg-[#19212b] p-3 shadow-xl/30 text-white">
-      <img className="rounded-full size-15" src={Logo} alt="Logo do Sistema" />
-      <h1 className="text-xl font-bold text-center uppercase">nome da sua barbearia aqui</h1>
-      <div className="justify-self-end">{actions}</div>
+    <header className="bg-[#19212b] shadow-xl/30 text-white">
+      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <img className="rounded-full size-15" src={Logo} alt="Logo do Sistema" />
+          <span className="text-xl font-bold uppercase leading-none">[nome da sua barbearia aqui]</span>
+        </div>
+        <div className="flex items-center gap-4">{actions}</div>
+      </div>
     </header>
   );
 }
