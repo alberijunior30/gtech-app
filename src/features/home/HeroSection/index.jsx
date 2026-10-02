@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 export function HeroSection(){
     return(
         <section className="text-white">
-            <div className="max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 items-center gap-14">
+            <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 items-center gap-14">
                 <div className="flex flex-col gap-6">
                 <p className="uppercase text-green-500 font-bold">Agendamento online</p>
                 <h1 className="text-5xl font-bold">Seu horário marcado em poucos cliques.</h1>
