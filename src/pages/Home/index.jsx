@@ -12,9 +12,9 @@ export function Home(){
         <Header
             actions={
             <>
-                <Link>Serviços</Link>
-                <Link>Equipe</Link>
-                <Link>Contatos</Link>
+                <a href="#servicos">Serviços</a>
+                <a href="#equipe">Equipe</a>
+                <a href="#contato">Contato</a>
                 <Link to="/login"className={cn(buttonVariants(),"bg-green-500 hover:bg-green-600 p-5",)}>Entrar</Link>
             </>
             }/>
