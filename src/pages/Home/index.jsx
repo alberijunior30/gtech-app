@@ -4,6 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Header } from "@/components/layouts/Header";
 import { HeroSection } from "@/features/home/HeroSection";
 import { HowItWorksSection } from "@/features/home/HowItWorksSection";
+import { ServicesSection } from "@/features/home/ServicesSection";
 export function Home(){
 
     return (
@@ -20,6 +21,7 @@ export function Home(){
 
             <HeroSection/>
             <HowItWorksSection/>
+            <ServicesSection/>
             </>
 
     );
