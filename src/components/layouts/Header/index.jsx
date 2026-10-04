@@ -11,7 +11,7 @@ export function Header({links = [],actions}) {
   function close(){setState(false)}
 
   return (
-    <header className="bg-[#19212b] shadow-xl/30 text-white">
+    <header className="bg-card shadow-xl/30">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img className="rounded-full size-10 md:size-15" src={Logo} alt="Logo do Sistema" />
@@ -25,9 +25,9 @@ export function Header({links = [],actions}) {
           {actions}
           <Sheet open={state} onOpenChange={setState} >
             <SheetTrigger aria-label="Abrir menu" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "md:hidden")}><Menu/></SheetTrigger>
-            <SheetContent side="right" className="bg-[#19212b] text-white">
+            <SheetContent side="right" className="bg-card ">
               <SheetHeader>
-                <SheetTitle className="text-white">Menu</SheetTitle>
+                <SheetTitle>Menu</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-4 text-center">
                 {links.map((link)=>(<a onClick={close} key={link.href} href={link.href}>{link.Label}</a>))}

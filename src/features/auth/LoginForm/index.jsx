@@ -8,7 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 export function Login(){
     return (
-      <Card className="w-full max-w-sm bg-[#19212b] p-7 text-white shadow-xl/30">
+      <Card className="w-full max-w-sm bg-card p-7  shadow-xl/30">
         <CardHeader className="text-center">
           <img
             className="rounded-full size-20 mb-7 mx-auto"
@@ -65,7 +65,7 @@ export function Login(){
           </div>
 
           <Button
-            className="w-full bg-green-500 mt-6 hover:bg-green-600"
+            className="w-full mt-6 bg-primary"
             type="submit"
           >
             Logar

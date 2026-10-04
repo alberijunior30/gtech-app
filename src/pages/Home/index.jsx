@@ -17,7 +17,7 @@ export function Home(){
         <>
             <Header 
             links={navLinks}
-            actions={<Link to="/login"className={cn(buttonVariants(),"bg-green-500 hover:bg-green-600 p-5",)}>Entrar</Link>}/>
+            actions={<Link to="/login"className={cn(buttonVariants(),"p-5",)}>Entrar</Link>}/>
 
             <HeroSection/>
             <HowItWorksSection/>
