@@ -4,6 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { Container } from "@/components/layouts/Container";
 
 export function Header({links = [],actions}) {
   const [state, setState] = useState(false);
@@ -12,7 +13,7 @@ export function Header({links = [],actions}) {
 
   return (
     <header className="bg-card shadow-xl/30">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <Container className="py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img className="rounded-full size-10 md:size-15" src={Logo} alt="Logo do Sistema" />
           <span className="text-sm md:text-xl font-bold uppercase leading-none">[nome da sua barbearia aqui]</span>
@@ -35,7 +36,7 @@ export function Header({links = [],actions}) {
             </SheetContent>
           </Sheet>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }

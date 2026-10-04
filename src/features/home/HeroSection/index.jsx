@@ -2,11 +2,12 @@ import barber from "@/assets/barber.png";
 import { Link } from "react-router";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Container } from "@/components/layouts/Container";
 
 export function HeroSection() {
   return (
     <section>
-      <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 items-center gap-14">
+      <Container className=" py-24 grid lg:grid-cols-2 items-center gap-14">
         <div className="flex flex-col gap-6">
           <p className="uppercase text-primary font-bold">
             Agendamento online
@@ -43,7 +44,7 @@ export function HeroSection() {
           src={barber}
           alt="Interior da barbearia"
         />
-      </div>
+      </Container>
     </section>
   );
 }

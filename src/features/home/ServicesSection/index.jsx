@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router";
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button";
+import { Container } from "@/components/layouts/Container";
 export function ServicesSection(){
     const services = [
   { id: "corte", name: "Corte", duration: "[duração]", price: "[R$ 00]" },
@@ -12,7 +13,7 @@ export function ServicesSection(){
 ];
     return (
       <section id="servicos" className="">
-        <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col gap-10">
+        <Container className=" py-20 flex flex-col gap-10">
           <div className="flex flex-col text-center gap-3">
             <h2 className="font-bold text-3xl">Serviços</h2>
             <p className="text-muted-foreground">
@@ -32,7 +33,7 @@ export function ServicesSection(){
               </li>
             ))}
           </ul>
-        </div>
+        </Container>
       </section>
     );
 }

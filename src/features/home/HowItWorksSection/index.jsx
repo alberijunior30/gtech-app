@@ -1,3 +1,4 @@
+import { Container } from "@/components/layouts/Container";
 export function HowItWorksSection() {
   const steps = [
     { titulo: "Escolha o serviço", desc: "Corte, Barba ..." },
@@ -10,7 +11,7 @@ export function HowItWorksSection() {
 
   return (
     <section className=" bg-card">
-      <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col gap-10">
+      <Container className="py-20 flex flex-col gap-10">
         <h2 className="font-bold text-center text-3xl">Como funciona</h2>
         <ol className="grid md:grid-cols-3 gap-6">
           {steps.map((step, i) => (
@@ -29,7 +30,7 @@ export function HowItWorksSection() {
             </li>
           ))}
         </ol>
-      </div>
+      </Container>
     </section>
   );
 }
