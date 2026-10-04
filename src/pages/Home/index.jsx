@@ -7,22 +7,22 @@ import { HowItWorksSection } from "@/features/home/HowItWorksSection";
 import { ServicesSection } from "@/features/home/ServicesSection";
 export function Home(){
 
+    const navLinks = [
+        {href:"#servicos", Label:"Serviços"},
+        {href:"#equipe", Label:"Equipe"},
+        {href:"#contato", Label:"Contato"}
+    ]
+
     return (
         <>
-        <Header
-            actions={
-            <>
-                <a href="#servicos">Serviços</a>
-                <a href="#equipe">Equipe</a>
-                <a href="#contato">Contato</a>
-                <Link to="/login"className={cn(buttonVariants(),"bg-green-500 hover:bg-green-600 p-5",)}>Entrar</Link>
-            </>
-            }/>
+            <Header 
+            links={navLinks}
+            actions={<Link to="/login"className={cn(buttonVariants(),"bg-green-500 hover:bg-green-600 p-5",)}>Entrar</Link>}/>
 
             <HeroSection/>
             <HowItWorksSection/>
             <ServicesSection/>
-            </>
+        </>
 
     );
 }
