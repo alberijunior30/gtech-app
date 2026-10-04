@@ -1,11 +1,14 @@
 import Logo from "@/assets/images.png";
-import { Button } from "@/components/ui/button";
+import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
+import { useState } from "react";
 
 export function Header({links = [],actions}) {
+  const [state, setState] = useState(false);
 
+  function close(){setState(false)}
 
   return (
     <header className="bg-[#19212b] shadow-xl/30 text-white">
@@ -20,7 +23,17 @@ export function Header({links = [],actions}) {
             {links.map((link)=>(<a key={link.href} href={link.href}>{link.Label}</a>))}
           </nav>
           {actions}
-          <button aria-label="Abrir menu" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "md:hidden")}><Menu/></button>
+          <Sheet open={state} onOpenChange={setState} >
+            <SheetTrigger aria-label="Abrir menu" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "md:hidden")}><Menu/></SheetTrigger>
+            <SheetContent side="right" className="bg-[#19212b] text-white">
+              <SheetHeader>
+                <SheetTitle className="text-white">Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-4 text-center">
+                {links.map((link)=>(<a onClick={close} key={link.href} href={link.href}>{link.Label}</a>))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
