@@ -27,7 +27,7 @@ export function Login(){
           <Field>
             <FieldLabel htmlFor="email">Email</FieldLabel>
             <Input
-              className="border-white/20 focus-visible:border-green-500 focus-visible:ring-0"
+              className="border-white/20 focus-visible:border-primary focus-visible:ring-0"
               id="email"
               name="email"
               type="email"
@@ -39,7 +39,7 @@ export function Login(){
           <Field>
             <FieldLabel htmlFor="senha">Senha</FieldLabel>
             <Input
-              className="border-white/20 focus-visible:border-green-500 focus-visible:ring-0"
+              className="border-white/20 focus-visible:border-primary focus-visible:ring-0"
               id="senha"
               name="senha"
               type="password"
@@ -58,14 +58,14 @@ export function Login(){
 
             <Link
               to="/recover"
-              className="underline text-green-500 hover:text-green-600"
+              className="underline text-primary hover:text-primary/70"
             >
               Esqueci minha senha
             </Link>
           </div>
 
           <Button
-            className="w-full mt-6 bg-primary"
+            className="w-full mt-6 bg-primary p-5"
             type="submit"
           >
             Logar
@@ -76,7 +76,7 @@ export function Login(){
           Não tem uma conta ainda?{" "}
           <Link
             to="/register"
-            className="underline text-green-500 hover:text-green-600"
+            className="underline text-primary hover:text-primary/70"
           >
             Registrar-se
           </Link>
